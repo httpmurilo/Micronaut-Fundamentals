@@ -1,5 +1,9 @@
 package smart.oven.beans;
 
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
+
+@Singleton
 public class Oven {
 
     public Lights getLights() {
@@ -21,6 +25,7 @@ public class Oven {
     private Lights lights;
     private Grill grill;
 
+    @Inject
     public Oven(Lights lights, Grill grill) {
         this.lights = lights;
         this.grill = grill;
